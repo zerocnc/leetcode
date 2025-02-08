@@ -1,39 +1,37 @@
-#include <map>
-#include <string>
-
-std::map<char, std::string> myMap;
-std::map<char, std::string>::iterator it;
-
 class Solution {
 public:
-
     vector<string> letterCombinations(string digits) {
-
-        vector<std::string> parseString;
-        vector<std::string> tempVec;
-        std::string tempStr;
-
-        // Inserting elements
-        myMap['2'] ="abc";
-        myMap['3'] ="def";
-        myMap['4'] = "ghi";
-        myMap['5'] = "jkl";
-        myMap['6'] = "mno";
-        myMap['7'] = "pqrs";
-        myMap['8'] = "tuv";
-        myMap['9'] = "wxyz";
-
-        if (digits.size() == 0){
-            return tempVec;
+        vector<string> res;
+        
+        if (digits.empty()) {
+            return res;
         }
-
-        for ( int ndx = 0; ndx < digits.size(); ndx++ ){
-            for (int x = 0; x < ndx; x++){
-                tempStr += ;
-            }
-            tempVec.push_back(tempStr);
-        }
-
-        return tempVec;
+        
+        unordered_map<char, string> digitToLetters = {
+            {'2', "abc"},
+            {'3', "def"},
+            {'4', "ghi"},
+            {'5', "jkl"},
+            {'6', "mno"},
+            {'7', "pqrs"},
+            {'8', "tuv"},
+            {'9', "wxyz"}
+        };
+        
+        backtrack(digits, 0, "", res, digitToLetters);
+        
+        return res;        
     }
+
+    void backtrack(const string& digits, int idx, string comb, vector<string>& res, const unordered_map<char, string>& digitToLetters) {
+        if (idx == digits.length()) {
+            res.push_back(comb);
+            return;
+        }
+        
+        string letters = digitToLetters.at(digits[idx]);
+        for (char letter : letters) {
+            backtrack(digits, idx + 1, comb + letter, res, digitToLetters);
+        }
+    }    
 };
