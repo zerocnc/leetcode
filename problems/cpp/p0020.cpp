@@ -10,9 +10,10 @@ public:
         if ( s.size() < 2 )
             return false;
 
-        for (auto ch : s )
+        for (int ndx = 0; ndx < s.size(); ndx++ )
         {
 
+            char ch = s[ndx];
             if ( ch == '(' || ch == '{' || ch == '[' )
             {
                 myStack.push(ch);
@@ -24,7 +25,6 @@ public:
                     temp = myStack.top();
                     myStack.pop();
                     
-                    // Check if goes with (
                     switch (temp) {
                         case '(':
                         if (ch != ')' )
@@ -32,15 +32,15 @@ public:
                         break;
 
                         case '{':
-                        break;
                         if (ch != '}' )
                             return false;
+                        break;
 
                         case '[':
                         if (ch != ']' )
                             return false;
-
                         break;
+
                         default:
                         return false;
                     }
@@ -53,7 +53,10 @@ public:
 
         }
 
-        return true;
+        if (myStack.empty())
+            return true;
+        else
+            return false;
 
     }
 };
