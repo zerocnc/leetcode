@@ -1,24 +1,38 @@
-#include <vector>
-
 class Solution {
-public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target) {
-		std::vector<int> temp;
-
-		for (int i = 0; i < nums.size() - 1; i++)
-		{
-			for (int j = 1+i; j < nums.size(); j++)
-			{
-				if (nums[i] + nums[j] == target)
-				{
-					temp.push_back(i);
-					temp.push_back(j);
-					return temp;
+	public:
+		vector<int> twoSum(vector<int>& nums, int target) {
+	
+			for (int i = 0; i < nums.size() - 1; i++ ){
+				for ( int j = i + 1; j < nums.size(); j++ ){
+					if ( nums[i] + nums[j] == target )
+						return {i,j};
 				}
 			}
+	
+			return {0,1};
 		}
+	};
 
-		return temp;
-    }
-    
-};
+class Solution_02 {
+	public:
+		vector<int> twoSum(vector<int>& nums, int target) {
+			unordered_map<int, int> uoMap;
+			size_t n = nums.size();
+	
+			// Populate Hash table
+			for ( size_t ndx = 0; ndx < n; ndx++ ){
+				uoMap[nums[ndx]] = ndx;
+			}
+		
+			// Find the complement
+			for ( int ndx = 0; ndx < n; ndx++ ){
+				int complement = target - nums[ndx];
+				if ( uoMap.count(complement) && uoMap[complement] !=ndx){
+					return { ndx, uoMap[complement] };
+				}
+			}
+	
+			// No solution found
+			return {};
+		}
+	};
