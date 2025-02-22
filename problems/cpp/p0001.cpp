@@ -36,3 +36,26 @@ class Solution_02 {
 			return {};
 		}
 	};
+
+class Solution_03 {
+	public:
+		vector<int> twoSum(vector<int>& nums, int target) {
+			unordered_map<int, int> uoMap;
+			size_t n = nums.size();
+	
+			for (int ndx = 0; ndx < n; ndx++)
+			{
+				int complement = target - nums[ndx];
+	
+				if ( uoMap.count(complement)) {
+					return { uoMap[complement], ndx};
+				}
+	
+				uoMap[nums[ndx]] = ndx;
+			}
+		
+		
+			// No solution found
+			return {};
+		}
+	};
