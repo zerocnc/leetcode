@@ -10,4 +10,4 @@ The purpose of the repository is too track and keep my solutions from leetcode. 
 4. Median of Two Sorted Arrays [link](/problems/cpp/p0004.cpp)
 5. Longest Palindromic Substring [link](/problems/cpp/p0005.cpp)
 6. Zigzag Conversion [link](/problems/cpp/p0006.cpp)
-7. Reverse Integer 
+7. Reverse Integer [link](/problems/cpp//p0007.cpp)
