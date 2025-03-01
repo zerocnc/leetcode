@@ -26,9 +26,11 @@
                     }
                     lists = move(temp);
                 }
-    
-    
             }
+            else{
+                return nullptr;
+            }
+            
     
             return lists[0];
     
