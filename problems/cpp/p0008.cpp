@@ -5,8 +5,8 @@ class Solution {
     
             long long retNumber = 0;
             bool neg = false;
+            bool detSignAlready = false;
             bool findNumber = false;
-            queue<int> integerQueue;
     
             if ( s.size() > 0 ){
                 for (size_t ndx = 0; ndx < s.size(); ++ndx ){
@@ -15,9 +15,17 @@ class Solution {
                         switch(s[ndx]){
                             case '-':
                             neg = true;
+                            if ( detSignAlready){
+                                ndx = s.size();
+                            }
+                            detSignAlready = true;
                             break;
                         case('+'):
                             neg = false;
+                            if ( detSignAlready){
+                                ndx = s.size();
+                            }
+                            detSignAlready = true;
                             break;
                         default:
                             break;
