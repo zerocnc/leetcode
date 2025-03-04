@@ -12,34 +12,26 @@
     public:
         ListNode* swapPairs(ListNode* head) {
 
-            long long counter = 1;
-            bool swapCounter = false;
-            ListNode* pastNode = new ListNode;
-            ListNode* currentNode = new ListNode;
-            ListNode* swap = new ListNode;
-            ListNode* temp = new ListNode;
+            ListNode dummy(0, head);
+            ListNode* current = head;
+            ListNode* previous = &dummy;
 
-            if (head != nullptr ){
-                currentNode = head;
-                
-                while ( currentNode != nullptr ){
-                    currentNode = currentNode->next;
+            while ( current != nullptr && current->next != nullptr ){
 
-                    // swap
-                    // a->b->c
-                    // b->a->c
+                ListNode* past = current->next->next;
+                ListNode* temp = current->next;
 
-                    // p1->p2->p3
-                    // l1 & l2
+                temp->next = current;
+                current->next = past;
+                previous->next = temp;
 
-                    // p1/l1 -> p2/l2 ->p3
+                previous = current;
+                current = past;
 
-
-                
-                }
 
             }
+
     
-            return head;
+            return dummy.next;
         }
     };
