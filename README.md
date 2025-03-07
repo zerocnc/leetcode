@@ -11,4 +11,5 @@ The purpose of the repository is too track and keep my solutions from leetcode. 
 5. Longest Palindromic Substring [link](/problems/cpp/p0005.cpp)
 6. Zigzag Conversion [link](/problems/cpp/p0006.cpp)
 7. Reverse Integer [link](/problems/cpp//p0007.cpp)
-8. Palindrome Number [link](/problems//cpp/p0008.cpp)
+8. String to Integer (atoi) [link](/problems//cpp/p0008.cpp)
+9. Palindrome Number [link](/problems//cpp//p0009.cpp)
