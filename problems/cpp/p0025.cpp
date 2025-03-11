@@ -9,38 +9,41 @@
  * };
  */
  class Solution {
+
+
     public:
+        ListNode* reverse(ListNode* start, ListNode* end){
+    
+            ListNode* prev = nullptr;
+            ListNode* curr = start;
+    
+            while ( curr != end){
+                ListNode* next = curr->next;
+                curr->next = prev;
+                prev = curr;
+                curr = next;
+            }
+    
+            return prev;
+        }
+    
         ListNode* reverseKGroup(ListNode* head, int k) {
     
-            std::stack<ListNode*> tempS;
-            ListNode* past = head;
-            ListNode* dummy = ListNode(0);
-            ListNode* current = new ListNode;
-            bool first = true;
-    
-            while ( current->next != nullptr ){
-                for (size_t ndx = 0; ndx < k; ndx ){
-                    tempS.push(current);
-                    current = current->next;
-                }
-    
-                if ( first ){
-                    head = tempS.top();
-                    past = tempS.top();
-                }
-    
-                for (size_t ndx = 0; ndx < k; ndx ) {
-                    tempS.pop();
-                    past->next = tempS.top();
-                    past->next = dummy;
-                }
-            }
+            int count = 0;
+            ListNode* temp = head;
             
+            while (temp && count < k ){
+                temp = temp->next;
+                count++;
+            }
     
+            if ( count < k )
+                return head;
     
+            ListNode* new_head = reverse(head, temp);
     
+            head->next = reverseKGroup(temp, k);
     
-    
-            return head;
+            return new_head;
         }
     };
