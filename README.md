@@ -14,3 +14,4 @@ The purpose of the repository is too track and keep my solutions from leetcode. 
 8. String to Integer (atoi) [link](/problems//cpp/p0008.cpp)
 9. Palindrome Number [link](/problems//cpp//p0009.cpp)
 10. Regular Expressioon Matching [link](/problems/cpp/p0010.cpp)
+11. Some - [link](/problems/cpp/p0011.cpp)
