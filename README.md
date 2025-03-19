@@ -15,5 +15,5 @@ The purpose of the repository is too track and keep my solutions from leetcode. 
 9. Palindrome Number [link](/problems//cpp//p0009.cpp)
 10. Regular Expressioon Matching [link](/problems/cpp/p0010.cpp)
 11. Container with most water - [link](/problems/cpp/p0011.cpp)
-12. Integer to Roman - [link](/problems/cpp/p0021.cpp)
+12. Integer to Roman - [link](/problems/cpp/p0012.cpp)
 13. Roman to Integer -
