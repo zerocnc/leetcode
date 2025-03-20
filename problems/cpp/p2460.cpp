@@ -1,9 +1,6 @@
 class Solution {
     public:
         vector<int> applyOperations(vector<int>& nums) {
-            queue<int> myQueue;
-            queue<int> myQue2;
-            vector<int> tempVec;
     
             for ( size_t ndx = 0; ndx < nums.size() - 1; ndx++ ){
                 if ( nums[ndx] == nums[ ndx + 1 ]){
