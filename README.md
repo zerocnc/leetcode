@@ -18,3 +18,4 @@ The purpose of the repository is too track and keep my solutions from leetcode. 
 12. Integer to Roman - [link](/problems/cpp/p0012.cpp)
 13. Roman to Integer -
 2460. Apply Opertions to an Array
+2570. Merge 2d Arrays by Summing Values
