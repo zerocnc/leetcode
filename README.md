@@ -5,7 +5,7 @@ Welcome to the **LeetCode Solutions Repository**! This repository contains solut
 ## Repository Structure
 
 ```
-leetcode-solutions/
+leetcode/
 │── README.md
 │── solutions/
 │   ├── 001-020/
