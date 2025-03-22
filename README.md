@@ -1,21 +1,53 @@
-# leetcode
+# LeetCode Solutions Repository
 
-The purpose of the repository is too track and keep my solutions from leetcode. Eventually I will be linking similar problems to each other.
+Welcome to the **LeetCode Solutions Repository**! This repository contains solutions to LeetCode problems, including my own implementations and contributions from others. Each solution is accompanied by an explanation to help understand the approach used.
 
-## Problem List
+## Repository Structure
 
-1. Two Sum [link](problems/cpp/p0001.cpp)
-2. Add Two Numbers [link](problems/cpp/p0002.cpp)
-3. Longest Substring Without Repreating Characters [link](/problems//cpp/p0003.cpp)
-4. Median of Two Sorted Arrays [link](/problems/cpp/p0004.cpp)
-5. Longest Palindromic Substring [link](/problems/cpp/p0005.cpp)
-6. Zigzag Conversion [link](/problems/cpp/p0006.cpp)
-7. Reverse Integer [link](/problems/cpp//p0007.cpp)
-8. String to Integer (atoi) [link](/problems//cpp/p0008.cpp)
-9. Palindrome Number [link](/problems//cpp//p0009.cpp)
-10. Regular Expressioon Matching [link](/problems/cpp/p0010.cpp)
-11. Container with most water - [link](/problems/cpp/p0011.cpp)
-12. Integer to Roman - [link](/problems/cpp/p0012.cpp)
-13. Roman to Integer -
-2460. Apply Opertions to an Array
-2570. Merge 2d Arrays by Summing Values
+```
+leetcode-solutions/
+│── README.md
+│── solutions/
+│   ├── 001-020/
+│   │   ├── 001-two-sum.cpp
+│   │   ├── 002-add-two-numbers.cpp
+│   │   ├── ...
+│   │   ├── 020-valid-parentheses.cpp
+│   ├── 021-040/
+│   │   ├── 021-merge-two-sorted-lists.cpp
+│   │   ├── 022-generate-parentheses.cpp
+│   │   ├── ...
+│── explanations/
+│   ├── 001-two-sum.md
+│   ├── 002-add-two-numbers.md
+│   ├── ...
+│── links/
+│   ├── 001-two-sum.md (external resources & alternative solutions)
+│   ├── 002-add-two-numbers.md
+│── scripts/ (optional automation scripts)
+│── .gitignore
+```
+
+## How to Navigate
+
+- **solutions/**: Contains C++ solutions grouped in increments of 20 problems.
+- **explanations/**: Contains Markdown files explaining each problem’s approach and logic.
+- **links/**: External resources and alternative solutions from different perspectives.
+
+## How to Contribute
+
+If you'd like to contribute:
+
+1. Fork this repository.
+2. Add your solution inside the appropriate folder (or create a new one if needed).
+3. Add an explanation in `explanations/` with the same numbering.
+4. Submit a pull request!
+
+## Helpful Links
+
+- [LeetCode Official Site](https://leetcode.com/)
+- [C++ Standard Library Reference](https://en.cppreference.com/w/)
+- [Competitive Programming Guide](https://cp-algorithms.com/)
+
+Happy Coding! 🚀
+
